@@ -7,8 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class BrillTaggerTest extends TestCase
 {
-    /** @var BrillTagger $tagger */
-    private $tagger;
+    private BrillTagger|null $tagger;
 
     public function setUp(): void
     {
@@ -25,7 +24,7 @@ class BrillTaggerTest extends TestCase
      *
      * @return array
      */
-    public function sampleInputProvider(): array
+    public static function sampleInputProvider(): array
     {
         return require __DIR__ . '/data_provider/sample_input.php';
     }
@@ -35,7 +34,7 @@ class BrillTaggerTest extends TestCase
      *
      * @return array
      */
-    public function verbAfterArticleInputProvider(): array
+    public static function verbAfterArticleInputProvider(): array
     {
         return require __DIR__ . '/data_provider/noun_after_article.php';
     }
@@ -45,7 +44,7 @@ class BrillTaggerTest extends TestCase
      *
      * @return array
      */
-    public function percentageInputProvider(): array
+    public static function percentageInputProvider(): array
     {
         return require __DIR__ . '/data_provider/percentage.php';
     }
@@ -55,7 +54,7 @@ class BrillTaggerTest extends TestCase
      *
      * @return array
      */
-    public function pronounsInputProvider(): array
+    public static function pronounsInputProvider(): array
     {
         return require __DIR__ . '/data_provider/pronouns.php';
     }
@@ -65,7 +64,7 @@ class BrillTaggerTest extends TestCase
      *
      * @return array
      */
-    public function accusativePronounsInputProvider(): array
+    public static function accusativePronounsInputProvider(): array
     {
         return require __DIR__ . '/data_provider/accusative_pronouns.php';
     }
@@ -75,7 +74,7 @@ class BrillTaggerTest extends TestCase
      *
      * @return array
      */
-    public function singularPersonalPronounsInputProvider(): array
+    public static function singularPersonalPronounsInputProvider(): array
     {
         return require __DIR__ . '/data_provider/singular_personal_pronouns.php';
     }
@@ -85,7 +84,7 @@ class BrillTaggerTest extends TestCase
      *
      * @return array
      */
-    public function singularReflexivePronounsInputProvider(): array
+    public static function singularReflexivePronounsInputProvider(): array
     {
         return require __DIR__ . '/data_provider/singular_reflexive_pronouns.php';
     }
@@ -95,7 +94,7 @@ class BrillTaggerTest extends TestCase
      *
      * @return array
      */
-    public function pluralReflexivePronounsInputProvider(): array
+    public static function pluralReflexivePronounsInputProvider(): array
     {
         return require __DIR__ . '/data_provider/plural_reflexive_pronouns.php';
     }
@@ -105,7 +104,7 @@ class BrillTaggerTest extends TestCase
      *
      * @return array
      */
-    public function possessivePronounsInputProvider(): array
+    public static function possessivePronounsInputProvider(): array
     {
         return require __DIR__ . '/data_provider/possessive_pronouns.php';
     }
@@ -115,7 +114,7 @@ class BrillTaggerTest extends TestCase
      *
      * @return array
      */
-    public function properNounInputProvider(): array
+    public static function properNounInputProvider(): array
     {
         return require __DIR__ . '/data_provider/proper_noun.php';
     }
